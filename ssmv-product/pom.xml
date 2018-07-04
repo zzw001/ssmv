@@ -9,16 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ssmv.common</groupId>
-    <artifactId>ssmv-common</artifactId>
+    <groupId>com.ssmv.product</groupId>
+    <artifactId>ssmv-product</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>ssmv-common-dao</module>
-        <module>ssmv-common-pojo</module>
-        <module>ssmv-common-service</module>
-        <module>ssmv-common-web</module>
+        <module>ssmv-product-dao</module>
+        <module>ssm-product-pojo</module>
+        <module>ssm-product-service</module>
+        <module>ssmv-product-web</module>
     </modules>
+
     <build>
         <plugins>
             <!-- tomcat6插件 -->
@@ -82,4 +83,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
