@@ -12,5 +12,16 @@
     <artifactId>ssmv-common-service</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
+<dependencies>
+    <dependency>
+        <groupId>com.ssmv.common</groupId>
+        <artifactId>ssmv-common-pojo</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+        <groupId>com.ssmv.common</groupId>
+        <artifactId>ssmv-common-dao</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+</dependencies>
 </project>
