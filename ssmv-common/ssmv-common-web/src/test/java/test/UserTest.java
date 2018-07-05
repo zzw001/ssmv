@@ -8,6 +8,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.UUID;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:spring.xml"})
@@ -17,11 +18,17 @@ public class UserTest {
     private UserService userService;
 
     @Test
-    public void userinset(){
+    public void userInset(){
         User user = new User();
-        user.setUuid("1");
+        user.setUuid(UUID.randomUUID().toString());
         user.setName("1");
         user.setPassword("1");
         userService.add(user);
+    }
+
+    @Test
+    public void nameExistTest(){
+        String name = "0";
+        System.out.println(userService.isExistName(name));
     }
 }
