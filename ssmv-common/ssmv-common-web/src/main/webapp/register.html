@@ -38,7 +38,8 @@
                 <form method="post">
                     <div class="form-group">
                         <label>用户名</label>
-                        <input name="name">
+                        <input name="name" id="name">
+                        <span v-if="show">{{message}}</span>
                     </div>
                 </form>
             </div>
@@ -46,5 +47,14 @@
         </div>
     </div>
 </main>
+<script src="/static/js/vue.min.js"></script>
+<script>
+    var name = new Vue({
+        el:'#name',
+        data:{
+            show:false
+        }
+    })
+</script>
 </body>
 </html>

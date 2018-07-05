@@ -5,4 +5,6 @@ import com.ssmv.common.entity.User;
 public interface UserService {
 
     int add(User user);
+
+    boolean isExistName(String name);
 }

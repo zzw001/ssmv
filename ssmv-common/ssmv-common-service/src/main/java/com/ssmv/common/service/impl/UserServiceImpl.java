@@ -17,4 +17,9 @@ public class UserServiceImpl implements UserService {
     public int add(User user) {
         return userMapper.insert(user);
     }
+
+    @Override
+    public boolean isExistName(String name) {
+        return userMapper.selectByName(name) != null ? true : false;
+    }
 }
