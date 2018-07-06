@@ -28,7 +28,7 @@ public class UserTest {
 
     @Test
     public void nameExistTest(){
-        String name = "100";
+        String name = "1000";
         System.out.println(userService.isExistName(name));
     }
 }
