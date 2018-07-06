@@ -6,18 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ssm-product-pojo" />
-        <module name="ssm-product-service" />
         <module name="ssmv-common-dao" />
         <module name="ssmv-common-pojo" />
         <module name="ssmv-common-service" />
         <module name="ssmv-common-web" />
-        <module name="ssmv-product-dao" />
-        <module name="ssmv-product-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ssm-product-pojo" target="1.8" />
+      <module name="ssm-product-service" target="1.8" />
       <module name="ssmv-product" target="1.7" />
+      <module name="ssmv-product-dao" target="1.8" />
+      <module name="ssmv-product-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

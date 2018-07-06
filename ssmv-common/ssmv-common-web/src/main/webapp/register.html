@@ -35,10 +35,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <form method="post">
-                    <div class="form-group">
+                <form>
+                    <div class="form-group" id="name-div">
                         <label>用户名</label>
-                        <input name="name" id="name">
+                        <input name="name" id="name" @click="showTip()" @blur="hideTip()">
                         <span v-if="show">{{message}}</span>
                     </div>
                 </form>
@@ -50,11 +50,32 @@
 <script src="/static/js/vue.min.js"></script>
 <script>
     var name = new Vue({
-        el:'#name',
+        el:'#name-div',
         data:{
             show:false
+        },
+        methods:{
+            showTip:function () {
+
+                this.show = true;
+                this.message = "输入10个字符以内";
+            },
+            hideTip:function () {
+                let url = '/register/nameExist';
+                let parames =
+                    {
+                        parems:{
+                            username : this.name
+                        }
+                    };
+                console.log(parames.parems.username);
+                this.$http.post(url,parames).then(function (data) {
+                    this.show = data.show;
+                    this.message = data.message;
+                });
+            }
         }
-    })
+    });
 </script>
 </body>
 </html>
