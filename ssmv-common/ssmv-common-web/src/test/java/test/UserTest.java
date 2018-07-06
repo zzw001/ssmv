@@ -21,14 +21,14 @@ public class UserTest {
     public void userInset(){
         User user = new User();
         user.setUuid(UUID.randomUUID().toString());
-        user.setName("2");
+        user.setName("3");
         user.setPassword("1");
         userService.add(user);
     }
 
     @Test
     public void nameExistTest(){
-        String name = "1";
+        String name = "100";
         System.out.println(userService.isExistName(name));
     }
 }

@@ -12,12 +12,5 @@
         <module name="ssmv-common-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ssm-product-pojo" target="1.8" />
-      <module name="ssm-product-service" target="1.8" />
-      <module name="ssmv-product" target="1.7" />
-      <module name="ssmv-product-dao" target="1.8" />
-      <module name="ssmv-product-web" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
