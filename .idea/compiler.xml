@@ -12,5 +12,12 @@
         <module name="ssmv-common-web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ssmv-common" target="1.7" />
+      <module name="ssmv-common-dao" target="1.8" />
+      <module name="ssmv-common-pojo" target="1.8" />
+      <module name="ssmv-common-service" target="1.8" />
+      <module name="ssmv-common-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
