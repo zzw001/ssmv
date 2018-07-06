@@ -22,7 +22,7 @@ public class UserTest {
         User user = new User();
         user.setUuid(UUID.randomUUID().toString());
         user.setName("3");
-        user.setPassword("0");
+        user.setPassword("2");
         userService.add(user);
     }
 
