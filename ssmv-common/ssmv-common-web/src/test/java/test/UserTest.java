@@ -29,6 +29,14 @@ public class UserTest {
     @Test
     public void nameExistTest(){
         String name = "100000";
-        System.out.println(userService.isExistName(name));
+        System.out.println(userService.registerExistName(name));
+    }
+
+    @Test
+    public void loginTest(){
+        User user = new User();
+        user.setName("1");
+        user.setPassword("");
+        System.out.println(userService.login(user));
     }
 }
