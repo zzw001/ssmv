@@ -2,7 +2,6 @@ package com.ssmv.common.service;
 
 import com.ssmv.common.entity.User;
 import com.ssmv.common.model.NameMessage;
-import com.ssmv.common.model.SignMessage;
 
 public interface UserService {
 
@@ -11,8 +10,4 @@ public interface UserService {
     User registerExistName(String name);
 
     NameMessage loginExistName(String name);
-
-    SignMessage register(User user);
-
-    SignMessage login(User user);
 }
