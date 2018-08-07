@@ -6,5 +6,7 @@ public interface UserMapper {
 
     int insert(User user);
 
+    int update(User user);
+
     User selectByName(String name);
 }
