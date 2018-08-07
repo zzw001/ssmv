@@ -8,5 +8,7 @@ public interface UserMapper {
 
     int update(User user);
 
+    int delete(User user);
+
     User selectByName(String name);
 }
