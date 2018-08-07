@@ -26,27 +26,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public NameMessage registerExistName(String name) {
-        NameMessage nameMessage = new NameMessage();
-        if(name == null || name.length() == 0){
-            nameMessage.setUse(false);
-            nameMessage.setMessage("用户名不能为空");
-        }else{
-            User user = userMapper.selectByName(name);
-            if(user == null){
-                if(name.length() >10){
-                    nameMessage.setUse(false);
-                    nameMessage.setMessage("用户名太长");
-                }else{
-                    nameMessage.setUse(true);
-                    nameMessage.setMessage("用户名可以使用");
-                }
-            }else{
-                nameMessage.setUse(false);
-                nameMessage.setMessage("用户名已存在");
-            }
-        }
-        return nameMessage;
+    public User registerExistName(String name) {
+        return userMapper.selectByName(name);
     }
 
     @Override

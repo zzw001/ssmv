@@ -4,11 +4,10 @@ import com.ssmv.common.entity.User;
 import com.ssmv.common.model.SignMessage;
 import com.ssmv.common.service.UserService;
 import com.ssmv.common.model.NameMessage;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.UUID;
@@ -21,8 +20,10 @@ public class CommonController {
 
     @RequestMapping("/register/nameExist")
     @ResponseBody
-    public NameMessage registerNameExist(@RequestParam("username")String username){
-        return userService.registerExistName(username);
+    public ResponseEntity<User> registerNameExist(@RequestParam("username")String username){
+        User user = userService.registerExistName(username);
+        HttpStatus status = user != null ? HttpStatus.OK : HttpStatus.NOT_FOUND;
+        return new ResponseEntity<>(user,status);
     }
 
     @RequestMapping("/login/nameExist")

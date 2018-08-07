@@ -11,11 +11,16 @@ import javax.annotation.Resource;
 import java.util.UUID;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:spring.xml"})
+@ContextConfiguration(locations = {"classpath*:springdata.xml"})
 public class UserTest {
 
     @Resource
     private UserService userService;
+
+    @Test
+    public void test(){
+
+    }
 
     @Test
     public void userInset(){

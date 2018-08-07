@@ -8,7 +8,7 @@ public interface UserService {
 
     int add(User user);
 
-    NameMessage registerExistName(String name);
+    User registerExistName(String name);
 
     NameMessage loginExistName(String name);
 
